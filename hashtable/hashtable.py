@@ -38,7 +38,7 @@ class HashTable:
         Implement this.
         """
         # Your code here
-        return self.capacity
+        return self.capacity # len(self.storage)
 
     def get_load_factor(self):
         """
@@ -105,7 +105,6 @@ class HashTable:
             current = self.storage[i]
             while current.key != key and current.next:
                 current = current.next
-
             if current.key == key:
                 current.value = value
             else:

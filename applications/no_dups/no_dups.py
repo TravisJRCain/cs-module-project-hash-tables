@@ -4,11 +4,11 @@ def no_dups(s):
     words = s.strip().split()
     new = ""
     # dict
-    lex = {}
+    group = {}
     # if word is not in dict, add it, if it is in dict, do not add, return stripped word
     for word in words:
-        if word not in lex.keys():
-            lex[word] = 1
+        if word not in group.keys():
+            group[word] = 1
             new += word + " "
     return new.strip()
 

@@ -1,5 +1,16 @@
 def no_dups(s):
     # Your code here
+    # strip and split the words
+    words = s.strip().split()
+    new = ""
+    # dict
+    group = {}
+    # if word is not in dict, add it, if it is in dict, do not add, return stripped word
+    for word in words:
+        if word not in group.keys():
+            group[word] = 1
+            new += word + " "
+    return new.strip()
 
 
 

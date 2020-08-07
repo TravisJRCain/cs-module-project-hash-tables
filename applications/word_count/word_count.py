@@ -1,5 +1,41 @@
 def word_count(s):
     # Your code here
+    # lowercase
+    s = s.lower()
+    # ignore these characters
+    ignore = ['"',
+        ":",
+        ";",
+        ",",
+        ".",
+        "-",
+        "+",
+        "=",
+        "/",
+        "\\",
+        "|",
+        "[",
+        "]",
+        "{",
+        "}",
+        "(",
+        ")",
+        "*",
+        "^",
+        "&",]
+
+    for char in ignore:
+        # replace characters with nothing
+        s = s.replace(char, "")
+        # dictionary
+        counts = {}
+        split = s.split()
+        for word in split:
+            if word in counts.keys():
+                counts[word] += 1
+            else:
+                counts[word] = 1
+        return counts
 
 
 
